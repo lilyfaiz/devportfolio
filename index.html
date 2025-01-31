@@ -206,45 +206,47 @@
                 </div>
                 <!-- End .project -->
             </div>
-				<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic iframe</title>
+    <title>Power BI & Tableau Dashboards</title>
     <style>
-        /* Center the entire content */
-        .container {
+        body {
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            flex-direction: column;
-            text-align: center;
+            background-color: #f4f4f4;
         }
 
-        /* Style the Tableau container */
-        .tableauPlaceholder {
-            max-width: 1200px; /* Set the max width to avoid it becoming too wide */
-            width: 100%;
-            margin: 0 auto; /* Center horizontally */
-        }
-
-        /* Optional: Adjust the iframe size based on screen size */
-        .tableauViz {
+        .dashboard-container {
             width: 100%;
             max-width: 1200px;
-            height: auto;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         h2.heading {
-            font-size: 24px;
+            text-align: center;
             margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .tableauPlaceholder {
+            width: 100%;
+            height: 827px; /* Fixed height for a good aspect ratio */
+            margin: 0 auto;
+            background-color: #f4f4f4;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+
+    <div class="dashboard-container">
         <h2 class="heading">Project 3: CMS 2023 Performance Ratings Data</h2>
         <div class="tableauPlaceholder" id="viz1680841259786" style="position: relative;">
             <noscript>
@@ -268,29 +270,26 @@
                 <param name='language' value='en-US' />
             </object>
         </div>
-
-        <script type='text/javascript'>
-            var divElement = document.getElementById('viz1680841259786');
-            var vizElement = divElement.getElementsByTagName('object')[0];
-            if (divElement.offsetWidth > 800) {
-                vizElement.style.width = '1200px';
-                vizElement.style.height = '827px';
-            } else if (divElement.offsetWidth > 500) {
-                vizElement.style.width = '1000px';
-                vizElement.style.height = '700px';
-            } else {
-                vizElement.style.width = '100%';
-                vizElement.style.height = '1427px';
-            }
-            var scriptElement = document.createElement('script');
-            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-            vizElement.parentNode.insertBefore(scriptElement, vizElement);
-        </script>
     </div>
+
+    <script type='text/javascript'>
+        var divElement = document.getElementById('viz1680841259786');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        if (divElement.offsetWidth > 800) {
+            vizElement.style.width = '100%';
+            vizElement.style.height = '827px';
+        } else {
+            vizElement.style.width = '100%';
+            vizElement.style.height = '1427px';
+        }
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+
 </body>
 </html>
 
-            </div>
 				<h2 class="heading">Project 4: Meningitis & Neospatial Sepsis Pediatric Database</h2>
 			 <!DOCTYPE html>
 <html>
